@@ -26,7 +26,7 @@
     else{
       echo "";
     }
-    ?>	
+    ?>
 		<div id="page-wrapper">
 
 			<!-- Banner -->
@@ -35,10 +35,12 @@
 					<p>Informe seus dados de acesso:</p>
 					<form action="Backend/logar.php" method="post">
 						<div class="row gtr-50 gtr-uniform">
-							<div class="col-8 col-12">
+							<div class="col-8 col-12" style="margin-left: 35%; max-width: 500px !important">
 								<input type="text" name="email" id="email" placeholder="Email" /></br>
 								<input type="password" name="senha" id="senha" placeholder="Senha" /></br>
 								<input type="submit" value="Entrar">
+								<br>
+								<a href="cadastro.php">Quero me Cadastrar</a>
 							</div>
 						</div>
 					</form>

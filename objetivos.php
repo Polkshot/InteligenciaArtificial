@@ -27,11 +27,11 @@ if(!isset($_SESSION['id_usuario'])){
 					<p>Informe qual o seu objetivo:</p>
 					<form action="loading.php" method="get">
 						<div class="row gtr-50 gtr-uniform">
-							<div class="col-8 col-12">
+							<div class="col-8 col-12" style="margin-left: 35%; max-width: 500px !important">
 								        <select name="objetivo">
             <?php print(getObjetivos()); ?>
         </select><br></br>
-		
+
 								<input type="submit" value="Continuar"><br>
 								<a href="logout.php">Sair</a>
 							</div>

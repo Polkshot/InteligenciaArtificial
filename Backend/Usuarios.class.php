@@ -11,6 +11,7 @@
     private $altura;
     private $peso;
     private $imc;
+    private $objetivo;
     private $id_TipoCorporal;
     private $braco;
     private $busto;
@@ -19,7 +20,7 @@
     private $quadril;
     private $senha;
 
-    function __construct($id, $usuario, $nome, $cpf, $email, $telefone, $dataNascimento, $sexo, $altura, $peso, $imc, $id_TipoCorporal, $braco, $busto, $cintura, $coxa, $quadril, $senha){
+    function __construct($id, $usuario, $nome, $cpf, $email, $telefone, $dataNascimento, $sexo, $altura, $peso, $imc, $objetivo, $id_TipoCorporal, $braco, $busto, $cintura, $coxa, $quadril, $senha){
       $this->id = $id;
       $this->usuario = $usuario;
       $this->nome = $nome;
@@ -31,6 +32,7 @@
       $this->altura = $altura;
       $this->peso = $peso;
       $this->imc = $imc;
+      $this->objetivo = $objetivo;
       $this->id_TipoCorporal = $id_TipoCorporal;
       $this->braco = $braco;
       $this->busto = $busto;
@@ -455,6 +457,31 @@
     public function setUsuario($usuario)
     {
         $this->usuario = $usuario;
+
+        return $this;
+    }
+
+
+    /**
+     * Get the value of Objetivo
+     *
+     * @return mixed
+     */
+    public function getObjetivo()
+    {
+        return $this->objetivo;
+    }
+
+    /**
+     * Set the value of Objetivo
+     *
+     * @param mixed $objetivo
+     *
+     * @return self
+     */
+    public function setObjetivo($objetivo)
+    {
+        $this->objetivo = $objetivo;
 
         return $this;
     }

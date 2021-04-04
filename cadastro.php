@@ -14,10 +14,6 @@
 	<body class="landing is-preload">
 <?php
 require("Backend/Controller.php");
-session_start();
-if(!isset($_SESSION['id_usuario'])){
-  header("Location:index.php?semLogin=true");
-}
 ?>
 		<div id="page-wrapper">
 
@@ -25,25 +21,23 @@ if(!isset($_SESSION['id_usuario'])){
 				<section id="banner">
 					<h2>Fit Workout</h2><br>
 					<p>Fale mais sobre você =D</p>
-					<form action="login.php" method="get">
+					<form action="Backend/cadastroExecuter.php" method="post">
 						<div class="row gtr-50 gtr-uniform">
-							<div class="col-8 col-12">
-							<input type="text" name="nome" id="nome" placeholder="Nome" /></br>
-							<input type="text" name="cpf" id="cpf" placeholder="CPF" /></br>
-							<input type="text" name="email" id="email" placeholder="Email" /></br>
-							<input type="text" name="telefone" id="telefone" placeholder="Telefone" /></br>
-							<input type="text" name="datanascimento" id="datanascimento" placeholder="Data de Nascimento" /></br>
-							<input type="text" name="sexo" id="sexo" placeholder="Sexo" /></br>
-							<input type="text" name="altura" id="altura" placeholder="Altura" /></br>
-							<input type="text" name="peso" id="peso" placeholder="Peso" /></br>
-							<input type="text" name="braco" id="braco" placeholder="Braço" /></br>
-							<input type="text" name="busto" id="busto" placeholder="Busto" /></br>
-							<input type="text" name="cintura" id="cintura" placeholder="Cintura" /></br>
-							<input type="text" name="coxa" id="coxa" placeholder="Coxa" /></br>
-							<input type="text" name="quadril" id="quadril" placeholder="Quadril" /></br>
-							<input type="password" name="senha" id="senha" placeholder="Senha" /></br>
-							
-		
+							<div class="col-8 col-12" style="margin-left: 35%; max-width: 500px !important">
+								<input type="text" name="nome" id="nome" placeholder="Nome" /></br>
+								<input type="text" name="cpf" id="cpf" placeholder="CPF" /></br>
+								<input type="text" name="email" id="email" placeholder="Email" /></br>
+								<input type="text" name="telefone" id="telefone" placeholder="Telefone" /></br>
+								<input type="text" name="dataNascimento" id="dataNascimento" placeholder="Data de Nascimento" /></br>
+								<input type="text" name="sexo" id="sexo" placeholder="Sexo" /></br>
+								<input type="text" name="altura" id="altura" placeholder="Altura" /></br>
+								<input type="text" name="peso" id="peso" placeholder="Peso" /></br>
+								<input type="text" name="braco" id="braco" placeholder="Braço" /></br>
+								<input type="text" name="busto" id="busto" placeholder="Busto" /></br>
+								<input type="text" name="cintura" id="cintura" placeholder="Cintura" /></br>
+								<input type="text" name="coxa" id="coxa" placeholder="Coxa" /></br>
+								<input type="text" name="quadril" id="quadril" placeholder="Quadril" /></br>
+								<input type="password" name="senha" id="senha" placeholder="Senha" /></br>
 								<input type="submit" value="Me Cadastrar"> <br>
 								<a href="index.php">Cancelar</a>
 							</div>

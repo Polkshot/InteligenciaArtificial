@@ -29,12 +29,16 @@ if(!isset($_SESSION['id_usuario'])){
 
     <?php
     if(isset($_GET['objetivo'])){
-      
-     $objetivo_id = $_GET['objetivo'];
+
+			$objetivo_id = $_GET['objetivo'];
+
+			if(isset($_GET['id_exe']) && isset($_GET['gostou'])){
+				insereInteracao($objetivo_id,$_GET['id_exe'], $_GET['gostou']);
+			}
 
      echo recomendacaoExercicioDeAcordoComObjetivo($objetivo_id);
 
-     echo recomendacaoExercicioDeAcordoComIMC();
+     echo recomendacaoExercicioDeAcordoComIMC($objetivo_id);
     }
     else {
       echo "Ops! Deu algo errado!";

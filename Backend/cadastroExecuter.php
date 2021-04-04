@@ -12,15 +12,16 @@ $sexo = $_POST["sexo"];
 $altura = (double) $_POST["altura"];
 $peso = (double) $_POST["peso"];
 $imc = $peso/($altura * $altura);
-$id_TipoCorporal = 1;
-$braco = $_POST["bracos"];
+$id_TipoCorporal = mt_rand(1,3);
+$objetivo = mt_rand(1,4);
+$braco = $_POST["braco"];
 $busto = $_POST["busto"];
 $cintura = $_POST["cintura"];
 $coxa = $_POST["coxa"];
 $quadril = $_POST["quadril"];
 $senha = $_POST["senha"];
 
-$usuarios = new Usuarios($id, $nome, $nome, $cpf, $email, $telefone, $dataNascimento, $sexo, $altura, $peso, $imc, $id_TipoCorporal, $braco, $busto, $cintura, $coxa, $quadril, $senha);
+$usuarios = new Usuarios($id, $nome, $nome, $cpf, $email, $telefone, $dataNascimento, $sexo, $altura, $peso, $imc, $objetivo, $id_TipoCorporal, $braco, $busto, $cintura, $coxa, $quadril, $senha);
 
 insereUsuario($usuarios);
 
